@@ -15,10 +15,10 @@ variable "vm_count" {
 
 variable "instance_size" {
   description = "The instance vm size"
-  default     = "Standard_D2s_v3" #2c8g
+  # default     = "Standard_D2s_v3" #2c8g
   # default = "Standard_D4s_v3" #4c16g
   # default = "Standard_D8s_v3" #8c32g
-  # default = "Standard_D16ads_v5" #16c64g
+  default = "Standard_D16ads_v5" #16c64g
 }
 
 variable "location" {
@@ -41,7 +41,7 @@ variable "admin_password" {
 
 variable "host_names" {
   type    = list(string)
-  default = ["master", "node1", "node2", "node3", "node4"]
+  default = ["master", "member1", "member2", "member3", "member4"]
 }
 
 variable "image_publisher" {

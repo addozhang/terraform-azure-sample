@@ -45,7 +45,7 @@ resource "azurerm_linux_virtual_machine" "demo" {
   location              = var.location
   resource_group_name   = var.resource_group_name
   network_interface_ids = ["${azurerm_network_interface.demo[count.index].id}"]
-  size                  = "Standard_D2s_v3"
+  size                  = "${var.instance_size}"
   admin_username        = var.admin_username
 
   admin_ssh_key {
